@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="app day" id="app">
+        <header class="header">
+        <h1 class="title">Weather App</h1>
+        <form id="searchForm" class="search" autocomplete="off">
+            <input id="cityInput" type="search" name="city" placeholder="Cari kota (mis. Jakarta)" />
+            <button type="submit" id="searchBtn">Cari</button>
+            <button type="button" id="geoBtn" title="Gunakan lokasi saya">📍</button>
+        </form>
+        </header>
+
+        <section class="card" id="card">
+        <div class="loader" id="loader" hidden>Loading…</div>
+
+        <div class="weather" id="weather" hidden>
+            <div class="left">
+            <img id="icon" alt="ikon cuaca" />
+            <div class="temp" id="temp"></div>
+            <div class="desc" id="desc"></div>
+            </div>
+
+            <div class="right">
+            <div class="location" id="location"></div>
+            <ul class="details">
+                <li>Feels: <span id="feels"></span></li>
+                <li>Humidity: <span id="humidity"></span></li>
+                <li>Wind: <span id="wind"></span></li>
+                <li>Sunrise: <span id="sunrise"></span></li>
+                <li>Sunset: <span id="sunset"></span></li>
+            </ul>
+            </div>
+        </div>
+
+        <p class="error" id="error" hidden></p>
+        </section>
+
+        <footer class="footer">
+        <small>Data dari OpenWeatherMap • Weather App</small>
+        </footer>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
